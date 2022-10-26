@@ -5,7 +5,7 @@ class Calculator extends React.PureComponent {
     return (
       <div className="Calculator">
         <div className="container grid grid-flow-row-dense grid-cols-4 grid-rows-6 px-72 pt-32">
-          <div className="card col-span-4 border-solid border-2 h-12 bg-gray-400 py-2">
+          <div className="card col-span-4 border-solid border-2 h-12 bg-gray-400 py-2 pr-1">
             0
           </div>
           <div className="border-solid border-2 bg-gray-100 py-2">AC</div>
