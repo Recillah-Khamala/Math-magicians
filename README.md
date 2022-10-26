@@ -6,7 +6,7 @@
 
 
 ## Built With
-- HTML5, CSS, ES6, Webpack, React, bootstrap
+- HTML5, ES6, Webpack, React, tailwind CSS
 
 ## Live Demo (if available)
 
