@@ -12,15 +12,15 @@ class Calculator extends React.PureComponent {
     };
   }
 
-  clickHandler = e => {
+  clickHandler = (e) => {
     // eslint-disable-next-line react/no-access-state-in-setstate
-    this.state(calculate(this.state, e.target.value));
+    this.setState(calculate(this.state, e.target.value));
   };
 
   render() {
     return (
       <div className="Calculator">
-        <div className="container grid grid-flow-row-dense grid-cols-4 grid-rows-6 px-72 pt-32">
+        <div className="container min-w-max grid grid-flow-row-dense grid-cols-4 grid-rows-6 px-72 pt-32 pb-0">
           <div className="col-span-4 border-solid border-2 h-12 bg-gray-400 py-2 pr-1">
             <span className="calcScreen">
               {this.state.total}
@@ -44,12 +44,7 @@ class Calculator extends React.PureComponent {
             </button>
           </div>
           <div className="border-solid border-2 bg-orange-400 py-2">
-            <button
-              type="button"
-              className="operator"
-              onClick={this.clickHandler}
-              value="÷"
-            >
+            <button type="button" onClick={this.clickHandler} value="÷">
               ÷
             </button>
           </div>
@@ -69,12 +64,7 @@ class Calculator extends React.PureComponent {
             </button>
           </div>
           <div className="border-solid border-2 bg-orange-400 py-2">
-            <button
-              type="button"
-              className="operator"
-              onClick={this.clickHandler}
-              value="x"
-            >
+            <button type="button" onClick={this.clickHandler} value="x">
               X
             </button>
           </div>
@@ -94,12 +84,7 @@ class Calculator extends React.PureComponent {
             </button>
           </div>
           <div className="border-solid border-2 bg-orange-400 py-2">
-            <button
-              type="button"
-              className="operator"
-              onClick={this.clickHandler}
-              value="-"
-            >
+            <button type="button" onClick={this.clickHandler} value="-">
               -
             </button>
           </div>
@@ -119,12 +104,7 @@ class Calculator extends React.PureComponent {
             </button>
           </div>
           <div className="border-solid border-2 bg-orange-400 py-2">
-            <button
-              type="button"
-              className="operator"
-              onClick={this.clickHandler}
-              value="+"
-            >
+            <button type="button" onClick={this.clickHandler} value="+">
               +
             </button>
           </div>
@@ -139,12 +119,7 @@ class Calculator extends React.PureComponent {
             </button>
           </div>
           <div className="border-solid border-2 bg-orange-400 py-2">
-            <button
-              type="button"
-              className="operator"
-              onClick={this.clickHandler}
-              value="="
-            >
+            <button type="button" onClick={this.clickHandler} value="=">
               =
             </button>
           </div>
