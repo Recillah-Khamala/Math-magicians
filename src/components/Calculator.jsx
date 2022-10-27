@@ -1,7 +1,6 @@
 import React from 'react';
 import calculate from '../logic/calculate';
 
-/* eslint-disable react/destructuring-assignment */
 class Calculator extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -13,19 +12,19 @@ class Calculator extends React.PureComponent {
   }
 
   clickHandler = (e) => {
-    // eslint-disable-next-line react/no-access-state-in-setstate
-    this.setState(calculate(this.state, e.target.value));
+    this.setState((state) => calculate(state, e.target.value));
   };
 
   render() {
+    const { total, operation, next } = this.state;
     return (
       <div className="Calculator">
-        <div className="container min-w-max grid grid-flow-row-dense grid-cols-4 grid-rows-6 px-72 pt-32 pb-0">
-          <div className="col-span-4 border-solid border-2 h-12 bg-gray-400 py-2 pr-1">
+        <div className="container min-w-max grid grid-flow-row-dense grid-cols-4 grid-rows-6 px-72 pt-32">
+          <div className="card col-span-4 border-solid border-2 h-12 bg-gray-400 py-2 pr-1">
             <span className="calcScreen">
-              {this.state.total}
-              {this.state.next}
-              {this.state.operation}
+              {total}
+              {operation}
+              {next}
             </span>
           </div>
           <div className="border-solid border-2 bg-gray-100 py-2">
