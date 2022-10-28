@@ -18,8 +18,8 @@ const Calculator = () => {
   };
 
   return (
-    <div className="Calculator h-screen py-10 px-8 ms:py-44 ms:px-52 md:py-20 md:px-28">
-      <div className="container flex flex-col h-full">
+    <div className="Calculator h-screen pt-32 px-8 lg:pt-36 lg:px-72 md:pt-44 md:px-16">
+      <div className="container flex flex-col h-screen">
         <div className="bg-gray-400 w-full text-white text-right h-10 flex py-2 pr-1">
           <span className="calcScreen mr-2 ml-auto">
             {total}
