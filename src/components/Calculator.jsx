@@ -1,6 +1,9 @@
 import React from 'react';
 import calculate from '../logic/calculate';
 
+const characters = ['AC', '+/-', '%', 7, 8, 9, 4, 5, 6, 1, 2, 3];
+const symbols = ['÷', 'x', '-', '+', '='];
+
 class Calculator extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -18,109 +21,58 @@ class Calculator extends React.PureComponent {
   render() {
     const { total, operation, next } = this.state;
     return (
-      <div className="Calculator">
-        <div className="container min-w-max grid grid-flow-row-dense grid-cols-4 grid-rows-6 px-72 pt-32">
-          <div className="card col-span-4 border-solid border-2 h-12 bg-gray-400 py-2 pr-1">
+      <div className="Calculator h-screen py-44 px-48">
+        <div className="container flex flex-col h-full">
+          <div className="bg-gray-400 w-full text-white text-right h-10 flex py-2 pr-1">
             <span className="calcScreen">
               {total}
               {operation}
               {next}
             </span>
           </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="AC">
-              AC
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="+/-">
-              +/-
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="%">
-              %
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-orange-400 py-2">
-            <button type="button" onClick={this.clickHandler} value="÷">
-              ÷
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="7">
-              7
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="8">
-              8
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="9">
-              9
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-orange-400 py-2">
-            <button type="button" onClick={this.clickHandler} value="x">
-              X
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="4">
-              4
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="5">
-              5
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="6">
-              6
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-orange-400 py-2">
-            <button type="button" onClick={this.clickHandler} value="-">
-              -
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="1">
-              1
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="2">
-              2
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="3">
-              3
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-orange-400 py-2">
-            <button type="button" onClick={this.clickHandler} value="+">
-              +
-            </button>
-          </div>
-          <div className="col-span-2 border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value="0">
-              0
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-gray-100 py-2">
-            <button type="button" onClick={this.clickHandler} value=".">
-              .
-            </button>
-          </div>
-          <div className="border-solid border-2 bg-orange-400 py-2">
-            <button type="button" onClick={this.clickHandler} value="=">
-              =
-            </button>
+          <div className="flex w-full">
+            <div className="bg-gray-100 grid grid-cols-3 w-full">
+              {characters.map((button) => (
+                <button
+                  type="button"
+                  className="bg-gray-100 border px-2 py-2 hover:font-extrabold"
+                  value={button}
+                  key={button}
+                  onClick={this.clickHandler}
+                >
+                  {button}
+                </button>
+              ))}
+              <button
+                type="button"
+                className="col col-span-2 hover:font-extrabold border bg-gray-100 py-2"
+                onClick={this.clickHandler}
+                value={0}
+              >
+                0
+              </button>
+              <button
+                type="button"
+                className="border hover:font-extrabold bg-gray-100 py-2 px-2"
+                onClick={this.clickHandler}
+                value="."
+              >
+                .
+              </button>
+            </div>
+            <div className="w-3/12 flex flex-col">
+              {symbols.map((sign) => (
+                <button
+                  type="button"
+                  className="border hover:font-extrabold bg-orange-400 py-2"
+                  key={sign}
+                  value={sign}
+                  onClick={this.clickHandler}
+                >
+                  {sign}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
