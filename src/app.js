@@ -8,7 +8,7 @@ import NavBar from './pages/navbar';
 
 const App = () => (
   <div className="App">
-    <>
+    <div className="bg-emerald-300">
       <Router>
         <NavBar />
         <Routes>
@@ -17,7 +17,7 @@ const App = () => (
           <Route path="/about" element={<Quote />} />
         </Routes>
       </Router>
-    </>
+    </div>
   </div>
 );
 

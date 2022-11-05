@@ -17,13 +17,13 @@ const NavBar = () => {
     },
   ];
   return (
-    <nav className="fixed top-0 left-0 right-0 flex justify-between px-12 py-5 items-center shadow shadow-gray-100 bg-transparent bg-none z-50">
-      <div>
-        <Link to="/">Math Magician</Link>
+    <nav className="fixed top-0 left-0 right-0 flex justify-between px-12 py-5 items-center shadow shadow-gray-100 bg-transparent bg-none z-50 text-emerald-300">
+      <div className="text-4xl">
+        <Link to="/" className="text-emerald-300 font-black">Math Magician</Link>
       </div>
-      <ul>
+      <ul flex className="flex gap-4 items-center">
         {Links.map((links) => (
-          <li key={links.to}>
+          <li key={links.to} className="mr-8 text-xl">
             <NavLink
               className={({ isActive }) => `nav-link${isActive ? ' activated' : ''}`}
               end

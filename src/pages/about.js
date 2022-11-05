@@ -20,8 +20,8 @@ const Quote = () => {
   const { quote, author } = array;
 
   return (
-    <div className="w-full pt-20 relative h-screen bg-gradient-to-r from-gray-300 to-gray-500 text-black">
-      <div className="mt-28 w-4/12 mx-auto px-8 py-4 text-center shadow-sm shadow-gray-100 bg-white rounded-lg">
+    <div className="w-full pt-20 relative h-screen bg-stone-900 text-black">
+      <div className="bg-emerald-300 text-2xl font-lg my-44 mx-56 rounded-sm py-4 px-4 w-9/12 gap-8rounded-lg">
         <blockquote>{quote}</blockquote>
         <p className="italic font-thin text-right">
           --
@@ -29,7 +29,7 @@ const Quote = () => {
         </p>
         <button
           type="button"
-          className="px-12 py-1 rounded-lg bg-red-300"
+          className="px-12 py-1 rounded-lg bg-emerald-300"
           onClick={() => getQuote()}
           onDoubleClick={() => setClicked(!clicked)}
         >

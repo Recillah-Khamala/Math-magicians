@@ -1,31 +1,30 @@
 import React from 'react';
-import math from '../images/math.png'
+import math from '../images/math.png';
 
 const Home = () => (
-  <section className="w-full pt-20 relative h-screen">
-    <h1 className="text-4xl mt-28 mx-10 text-red-400">Welcome to Our Page!</h1>
-    <img
-      src={math}
-      alt="math-magic"
-    />
-    <p className="text-base my-8 mx-10">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum atque
-      optio quaerat consequuntur a facere quasi modi neque maiores veniam et
-      accusamus, porro ducimus exercitationem dignissimos tempora dolore unde
-      perspiciatis non pariatur quia consectetur, velit laudantium. Ut, placeat
-      vero! Aut, natus omnis. Amet, magni? Soluta enim nulla necessitatibus
-      quisquam nam quis, consequatur velit laudantium libero ad alias fuga
-      deserunt amet provident quae ea beatae.
-    </p>
-    <p className="text-base my-5 mx-10">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum atque
-      optio quaerat consequuntur a facere quasi modi neque maiores veniam et
-      accusamus, porro ducimus exercitationem dignissimos tempora dolore unde
-      perspiciatis non pariatur quia consectetur, velit laudantium. Ut, placeat
-      vero! Aut, natus omnis. Amet, magni? Soluta enim nulla necessitatibus
-      quisquam nam quis, consequatur velit laudantium libero ad alias fuga
-      deserunt amet provident quae ea beatae.
-    </p>
+  <section className="w-full pt-32 h-screen relative bg-stone-900 rounded-b-large ">
+    <h1 className="text-4xl mx-10 text-emerald-300 text-3xl hover:font-black font-bold">
+      Welcome to Our Page!
+    </h1>
+    <div className="w-full flex flex-row gap-32">
+      <img src={math} alt="math-magic" className="w-3/12 pl-20" />
+      <div className="bg-emerald-300 text-xl font-lg my-8 mx-20 rounded-sm py-4 px-4 w-9/12 gap-8">
+        <p>
+          Did you know numeric values ​​on calculators move from bottom to top,
+          and not from top to bottom, as on phones - calculators come from
+          mechanical counting machines, where the number is traditionally
+          located from bottom to top.
+        </p>
+        <p>
+          Changing the phone over time, they used to run with a special rotating
+          disk for a very long time, and when the time came for digital buttons
+          or push-buttons, today it was replaced in digital objects, making the
+          arrangement of numbers similar Placed as expected, similar to the disc
+          on the phone - from top to bottom also in digital calculator, with
+          zero at the end.
+        </p>
+      </div>
+    </div>
   </section>
 );
 
