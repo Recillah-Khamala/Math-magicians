@@ -1,5 +1,4 @@
-import { defaults } from 'autoprefixer';
-import Operate from './operate';
+import operate from './operate';
 
 function isNumber(item) {
   return !!item.match(/[0-9]+/);
@@ -14,7 +13,7 @@ function isNumber(item) {
  *   next:String       the next number to be operated on with the total
  *   operation:String  +, -, etc.
  */
-const Calculate = (obj, buttonName) => {
+export default function calculate(obj, buttonName) {
   if (buttonName === 'AC') {
     return {
       total: null,
@@ -69,7 +68,7 @@ const Calculate = (obj, buttonName) => {
   if (buttonName === '=') {
     if (obj.next && obj.operation) {
       return {
-        total: Operate(obj.total, obj.next, obj.operation),
+        total: operate(obj.total, obj.next, obj.operation),
         next: null,
         operation: null,
       };
@@ -112,7 +111,7 @@ const Calculate = (obj, buttonName) => {
     }
 
     return {
-      total: Operate(obj.total, obj.next, obj.operation),
+      total: operate(obj.total, obj.next, obj.operation),
       next: null,
       operation: buttonName,
     };
@@ -131,6 +130,4 @@ const Calculate = (obj, buttonName) => {
     next: null,
     operation: buttonName,
   };
-};
-
-export default Calculate;
+}

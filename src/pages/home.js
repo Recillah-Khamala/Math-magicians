@@ -10,7 +10,7 @@ const Home = () => (
       <img src={math} alt="math-magic" className="w-3/12 pl-20" />
       <div className="bg-emerald-300 text-xl font-lg my-8 mx-20 rounded-sm py-4 px-4 w-9/12 gap-8">
         <p>
-          Did you know numeric values ​​on calculators move from bottom to top,
+          Did you know numeric values on calculators move from bottom to top,
           and not from top to bottom, as on phones - calculators come from
           mechanical counting machines, where the number is traditionally
           located from bottom to top.
