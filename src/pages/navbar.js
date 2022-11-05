@@ -21,7 +21,7 @@ const NavBar = () => {
       <div className="text-4xl">
         <Link to="/" className="text-emerald-300 font-black">Math Magician</Link>
       </div>
-      <ul flex className="flex gap-4 items-center">
+      <ul className="flex gap-4 items-center">
         {Links.map((links) => (
           <li key={links.to} className="mr-8 text-xl">
             <NavLink
