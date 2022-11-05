@@ -23,6 +23,8 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
+    "react/prop-types": "off",
+    "react/prefer-stateless-function": "off",
     "react/function-component-definition": [
       2,
       {

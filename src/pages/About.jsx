@@ -11,15 +11,15 @@ const Quote = () => {
 
   const getQuote = async () => {
     const mathQuote = await fetch(
-      'https://random-math-quote-api.herokuapp.com/'
+      'https://random-math-quote-api.herokuapp.com/',
     );
     const rest = await mathQuote.json();
     setArray(rest);
   };
 
-  const { quote, author } = arr;
+  const { quote, author } = array;
 
-  return(
+  return (
     <div className="w-full pt-20 relative h-screen bg-gradient-to-r from-gray-300 to-gray-500 text-black">
       <div className="mt-28 w-4/12 mx-auto px-8 py-4 text-center shadow-sm shadow-gray-100 bg-white rounded-lg">
         <blockquote>{quote}</blockquote>
@@ -37,7 +37,7 @@ const Quote = () => {
         </button>
       </div>
     </div>
-  )
+  );
 };
 
 export default Quote;
