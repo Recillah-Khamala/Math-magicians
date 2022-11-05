@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import calculate from '../logic/calculate';
+import Calculate from '../logic/calculate';
 
 const characters = ['AC', '+/-', '%', 7, 8, 9, 4, 5, 6, 1, 2, 3];
 const symbols = ['÷', 'x', '-', '+', '='];
@@ -14,7 +14,7 @@ const Calculator = () => {
   const { total, next, operation } = data;
 
   const clickHandler = (e) => {
-    setdata((data) => calculate(data, e.target.value));
+    setdata((data) => Calculate(data, e.target.value));
   };
 
   return (
