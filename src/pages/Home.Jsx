@@ -2,12 +2,12 @@ import React from 'react';
 
 const Home = () => (
   <section className="w-full pt-20 relative h-screen bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+    <h1 className="text-4xl mt-28 mx-10 text-red-400">Welcome to Our Page!</h1>
     {/* <img
       src={landing}
       alt="home-minimalist-bg"
       className="w-full h-screen top-0 object-cover absolute mix-blend-overlay"
     /> */}
-    <h1 className="text-4xl mt-28 mx-10 text-red-400">Welcome to Our Page!</h1>
     <p className="text-base my-8 mx-10">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum atque
       optio quaerat consequuntur a facere quasi modi neque maiores veniam et
