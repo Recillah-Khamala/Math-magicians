@@ -10,7 +10,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](to be updated)
+[Live Link](https://mathemagicians.netlify.app/)
 
 
 ## Project Setup
